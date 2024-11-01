@@ -6,7 +6,7 @@ const obfuscate = require('gulp-obfuscate');
 const imagemin = require('gulp-imagemin');
 
 function comprimeImagem(){
-    return gulp.src('./source/images/*')
+    return gulp.src('./source/images/*',{encoding: false})
     .pipe(imagemin())
     .pipe(gulp.dest('./build/images'));
 }
@@ -16,7 +16,7 @@ function comprimeJavaScript() {
     return gulp.src('./source/scripts/*.js')
     .pipe(uglify())
     .pipe(obfuscate())
-    .pipe(gulp.dest('.build/scripts'))
+    .pipe(gulp.dest('.build/scripts'));
 }
 
 
