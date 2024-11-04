@@ -4,7 +4,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const obfuscate = require('gulp-obfuscate');
 const imagemin = require('gulp-imagemin');
-
+//Corrigido
 function comprimeImagem(){
     return gulp.src('./source/images/*',{encoding: false})
     .pipe(imagemin())
